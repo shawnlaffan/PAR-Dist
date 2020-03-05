@@ -42,6 +42,7 @@ jobs:
           perl -V > perlversion.txt
           #  add text to trigger cache update
           echo with YAML::XS >> perlversion.txt
+          echo with Archive::Zip >> perlversion.txt
           ls -l perlversion.txt
 
 

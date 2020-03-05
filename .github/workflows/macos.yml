@@ -57,6 +57,7 @@ jobs:
         run: |
           cpanm --installdeps .
           cpanm YAML::XS
+          cpanm Archive::Zip
           perl -MArchive::Zip -E'say $Archive::Zip::VERSION'
       
       - name: Build and test 

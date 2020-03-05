@@ -58,7 +58,8 @@ jobs:
           cpanm --installdeps .
           cpanm YAML::XS
           cpanm --installdeps Archive::Zip
-          cpanm -v Archive::Zip
+          #  Archive::Zip fails bzip2 test
+          cpanm --notest Archive::Zip
           perl -MArchive::Zip -E'say $Archive::Zip::VERSION'
       
       - name: Build and test 

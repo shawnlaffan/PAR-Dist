@@ -23,7 +23,7 @@ $VERSION    = '0.49'; # Change version in POD, too!
   contains_binaries
 /;
 
-$DEBUG = 0;
+$DEBUG = 1;
 
 use Carp qw/carp croak/;
 use File::Spec;

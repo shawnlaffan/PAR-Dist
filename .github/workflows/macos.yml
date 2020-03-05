@@ -40,6 +40,8 @@ jobs:
       - name: Prepare for cache
         run: |
           perl -V > perlversion.txt
+          #  add text to trigger cache update
+          echo with YAML::XS >> perlversion.txt
           ls -l perlversion.txt
 
 
@@ -54,6 +56,7 @@ jobs:
       - name: Install cpan deps 
         run: |
           cpanm --installdeps .
+          cpanm YAML::XS
       
       - name: Build and test 
         run: |
